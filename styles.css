@@ -6,6 +6,25 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #66ffa3;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 body {
   background-color: #6675ff;
   color: #fff066;
@@ -28,12 +47,27 @@ h3 {
   color: #66ffa3;
 }
 
+#celsius,
+#fahrenheit {
+  width: 25%;
+  padding: 1rem;
+}
+
+.selected {
+  background-color: #ff6675;
+}
+
 .flex-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin-top: 5rem;
+}
+
+.degreeBtns {
+  display: flex;
+  justify-content: center;
 }
 
 .text-container {
